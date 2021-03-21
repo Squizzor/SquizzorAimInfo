@@ -11,7 +11,8 @@ alt.on("keyup", function (key) {
             var entityFound = natives.getEntityPlayerIsFreeAimingAt(alt.Player.local);
             if (entityFound[0]) {
                 var entityHash = natives.getEntityModel(entityFound[1]);
-                console.log('  Entity hash: 0x' + entityHash.toString(16).toUpperCase());
+                console.log('  Entity hash (dec): ' + entityHash.toString(10));
+                console.log('  Entity hash (hex): 0x' + entityHash.toString(16).toUpperCase());
                 
                 var entityPosition = natives.getEntityCoords(entityFound[1], false);
                 console.log('  Entity position: (X: ' + entityPosition.x + ' Y: ' + entityPosition.y + ' Z: ' + entityPosition.z + ')');
